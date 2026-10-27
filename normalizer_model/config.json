@@ -1,0 +1,27 @@
+{
+  "vocab_size": 4000,
+  "emb_dim": 256,
+  "hidden_dim": 256,
+  "dropout": 0.3,
+  "max_len": 96,
+  "context": 2,
+  "pad_id": 0,
+  "unk_id": 1,
+  "bos_id": 2,
+  "eos_id": 3,
+  "sep_id": 4,
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "clip": 1.0,
+  "seed": 42,
+  "special_tokens": [
+    "<pad>",
+    "<unk>",
+    "<bos>",
+    "<eos>",
+    "<sep>"
+  ],
+  "preprocessing": "NFC + whitespace; no lowercasing; mentions -> [user]; word-level seq2seq with context",
+  "best_epoch": 9,
+  "best_val_loss": 0.2630900225656874
+}
