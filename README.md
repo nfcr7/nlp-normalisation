@@ -30,10 +30,9 @@ Projet universitaire - Youssef Nafae.
 
 ## Déploiement
 
-1. Sur Kaggle, téléchargez `normalizer_model.zip` (ou `hf_space_package.zip`, qui contient déjà tout) depuis `/kaggle/working/` (onglet *Output*).
-2. Créez un Space sur https://huggingface.co/new-space (SDK **Streamlit**, matériel CPU basique).
-3. Dézippez, puis téléversez `app.py`, `requirements.txt`, `README.md` et le dossier `normalizer_model/` (onglet *Files* → *Add file* → *Upload files*).
-4. Le Space se construit automatiquement. Aucune clé API n'est nécessaire et le jeu de données privé n'est pas utilisé.
+1. Téléchargez `normalizer_model.zip`  depuis giuthb .
+2. Dézippez, puis téléversez `app.py`, `requirements.txt`, `README.md` .
+4. puis lance streamlite les terminal qui contient ce dossier .
 
 ## Fichiers volumineux
 
@@ -46,8 +45,6 @@ git add .gitattributes app.py requirements.txt README.md normalizer_model
 git commit -m "Add app and model"
 git push
 ```
-
-Alternative : publier les artefacts dans un **dépôt de modèle** Hugging Face et les télécharger au démarrage avec `huggingface_hub.snapshot_download`. Un dépôt public ne nécessite aucun jeton ; un dépôt privé exige un jeton de lecture stocké comme *secret* du Space.
 
 ## Test local
 
