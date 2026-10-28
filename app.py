@@ -8,6 +8,29 @@ ARTIFACT_DIR = Path(__file__).resolve().parent / "normalizer_model"
 REQUIRED_FILES = ["best_model.pt", "tokenizer.json", "config.json", "model_def.py", "inference.py"]
 
 st.set_page_config(page_title="Informal Text Normalizer", page_icon="💬", layout="wide")
+
+st.markdown("""
+<style>
+/* Input text */
+.stTextArea textarea {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Text inside the Original and Normalized output boxes */
+.stAlert p {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Placeholder text */
+.stTextArea textarea::placeholder {
+    color: #cccccc !important;
+    -webkit-text-fill-color: #cccccc !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("💬 Informal Text Normalizer")
 st.markdown(
     "Transforme des messages informels (Twitter / chat) en anglais normalisé grâce à un modèle "
@@ -35,7 +58,7 @@ EXAMPLES = [
     "thaaaaaaaaank u for makin me happppy",
     "i need help cuz i am lost, so pls call me b4 u leave, thx",
     "ur a good man ,thx for your help",
-    "rt @someone : omg i luv this song !",
+    "omg i luv this song !",
     "send me the pic asap cuz idk if ppl like it, thx",
     "i want ma money naw"
 ]
